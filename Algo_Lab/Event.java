@@ -1,4 +1,4 @@
-public class Event {
+public class Event { //Вспомогательный класс для 3 алгоритма, определяет каждую вертикальную сторону прямоугольника.
     short n;
     short left, right;
     byte diff;

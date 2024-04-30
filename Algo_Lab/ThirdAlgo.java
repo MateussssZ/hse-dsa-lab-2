@@ -4,7 +4,7 @@ class ThirdAlgo {
     PersistentSegmentTree PST;
     Integer[] XCoords;
     Integer[] YCoords;
-    ThirdAlgo(Rectangle[] rectangles){
+    ThirdAlgo(Rectangle[] rectangles){ //Сохраняем все уникальные точки Х и У
         SortedSet<Integer> XCoordinates = new TreeSet<>();
         SortedSet<Integer> YCoordinates = new TreeSet<>();
 
@@ -20,7 +20,7 @@ class ThirdAlgo {
         List<Event> events = new ArrayList<>();
 
 
-        for (Rectangle rect : rectangles){
+        for (Rectangle rect : rectangles){ //Сохраняем все вертикальные стороны в качестве Event
             events.add(new Event((short) Arrays.binarySearch(XCoords,rect.x1),(short) Arrays.binarySearch(YCoords,rect.y1),(short) Arrays.binarySearch(YCoords,rect.y2),(byte) 1));
             events.add(new Event((short) Arrays.binarySearch(XCoords,rect.x2),(short) Arrays.binarySearch(YCoords,rect.y1),(short) Arrays.binarySearch(YCoords,rect.y2),(byte) -1));
         }
@@ -32,7 +32,7 @@ class ThirdAlgo {
         }
     }
 
-    int BinarySearch(Integer coord,Integer[] Coords){
+    int BinarySearch(Integer coord,Integer[] Coords){ //Для поиска нужных точек
         int l =0;
         int r = Coords.length-1;
         if (Coords.length==0 || Coords[0]>coord || Coords[r]<=coord){
@@ -55,7 +55,7 @@ class ThirdAlgo {
         return l;
     }
 
-    int countRectangles(int x,int y){
+    int countRectangles(int x,int y){ //Ищем по персистентному ДО ответ
         int IdxX = BinarySearch(x,XCoords);
         int IdxY = BinarySearch(y,YCoords);
         if (IdxX == -1 || IdxY == -1 || XCoords.length==0) {

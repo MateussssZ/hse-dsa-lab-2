@@ -1,4 +1,4 @@
-public class Node {
+public class Node { //Ноды для персистентного ДО
     Node left, right;
     byte leftRange, rightRange, sum;
 

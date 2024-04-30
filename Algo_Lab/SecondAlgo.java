@@ -5,8 +5,8 @@ public class SecondAlgo {
     List<Integer> XCoords;
     List<Integer> YCoords;
 
-    SecondAlgo(Rectangle[] rectangles){
-        SortedSet<Integer> XCoordinates = new TreeSet<>();
+    SecondAlgo(Rectangle[] rectangles){ //Сохраняем все уникальные точки X и Y и строим двумерное поле точек таким образом,
+        SortedSet<Integer> XCoordinates = new TreeSet<>(); //Что к каждой точке Х подставляется каждая точка У
         SortedSet<Integer> YCoordinates = new TreeSet<>();
 
         for (Rectangle rect : rectangles){
@@ -28,8 +28,8 @@ public class SecondAlgo {
         }
     }
 
-    public int countRectangles(int x,int y) {
-
+    public int countRectangles(int x,int y) { //Определяем наибольшую из меньших точек на карте(относительно данной)
+                                              // и возвращаем значение данное на карте
         int XIdx = BinarySearch(x, XCoords);
         int YIdx = BinarySearch(y, YCoords);
         if (XIdx == -1 || YIdx == -1){
