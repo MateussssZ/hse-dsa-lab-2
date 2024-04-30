@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FirstAlgo {
+public class FirstAlgo{
     Rectangle[] rectangles;
 
     FirstAlgo(Rectangle[] rectangles) {

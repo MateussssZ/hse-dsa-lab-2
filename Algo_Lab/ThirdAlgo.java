@@ -1,6 +1,6 @@
 import java.util.*;
 
-class ThirdAlgo {
+class ThirdAlgo{
     PersistentSegmentTree PST;
     Integer[] XCoords;
     Integer[] YCoords;
@@ -55,7 +55,7 @@ class ThirdAlgo {
         return l;
     }
 
-    int countRectangles(int x,int y){ //Ищем по персистентному ДО ответ
+    public int countRectangles(int x, int y){ //Ищем по персистентному ДО ответ
         int IdxX = BinarySearch(x,XCoords);
         int IdxY = BinarySearch(y,YCoords);
         if (IdxX == -1 || IdxY == -1 || XCoords.length==0) {

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SecondAlgo {
+public class SecondAlgo{
     List<List<Integer>> map;
     List<Integer> XCoords;
     List<Integer> YCoords;

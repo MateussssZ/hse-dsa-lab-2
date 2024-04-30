@@ -21,5 +21,12 @@ public class Main {
             int sum = solution.countRectangles(x,y);
             System.out.println(sum);
         }
+
+        TimeCounter checker = new TimeCounter(new Rectangle[0],new ArrayList<>());
+        for(int i =1;i<=16384;i*=2){
+            checker.create_points(i);
+            checker.createRectangles((i));
+            checker.checkTime();
+        }
     }
 }
