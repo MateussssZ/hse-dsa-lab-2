@@ -43,9 +43,6 @@ public class Lift  extends Thread{
         while (curFloor!=to) {
             checkFloor(curFloor);
             try {
-                if (this.liftNumber==0){
-                    Thread.sleep(100000);
-                }
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
                 System.out.println("зДЕСЬ ЭКСПЕШПН");
@@ -60,7 +57,6 @@ public class Lift  extends Thread{
         }
         System.out.println("Лифт " + this.liftNumber + " прибыл на " + this.to + " этаж");
         info.liftPositions[this.liftNumber] = this.to;
-        info.offloadOrder();
     }
 
     void checkFloor(int floor){

@@ -26,6 +26,8 @@ public class House {
             else{
                 info.orderDown.add(query);
             }
+            Offloader offloader = new Offloader(info);
+            offloader.start();
         }
     }
 
